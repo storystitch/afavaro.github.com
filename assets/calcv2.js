@@ -4,8 +4,24 @@ document.addEventListener("DOMContentLoaded", function() {
   var numChildren = document.getElementById("children");
   var agi = document.getElementById("AGI");
   var eitcValue = document.getElementById("eitc-value");
+  var errorContainer = document.getElementById("error-container");
+  var errorDiv = document.getElementById("error-msg");
 
   form.addEventListener("submit", function() {
+    var errorMsg = null;
+    if (filingStatus.value < 0) {
+      errorMsg = "Please select your filing status.";
+    } else if (numChildren.value < 0) {
+      errorMsg = "Please select your number of children.";
+    } else if (agi.value <= 0) {
+      errorMsg = "Please enter your Adjusted Gross Income.";
+    }
+    if (errorMsg != null) {
+      errorDiv.innerHTML = errorMsg;
+      errorContainer.style.display = "block";
+      return false;
+    }
+
     var eitcAmount = calcEITC(filingStatus.value, numChildren.value, agi.value);
     eitcValue.innerHTML = "$" + eitcAmount.toLocaleString();
   });
