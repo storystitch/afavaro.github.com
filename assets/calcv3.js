@@ -38,7 +38,7 @@ const FilingStatus = {
 const MARRIED_JOINT_BRACKETS = [
   {
     minimumIncome: 7030,
-    creditRate: 0.153,
+    creditRate: 0.0765,
     phaseoutBeginningIncome: 14680,
     phaseoutPercent: 0.0765,
     phaseoutEndingIncome: 21710
@@ -69,7 +69,7 @@ const MARRIED_JOINT_BRACKETS = [
 const SINGLE_BRACKETS = [
   {
     minimumIncome: 7030,
-    creditRate: 0.153,
+    creditRate: 0.0765,
     phaseoutBeginningIncome: 8790,
     phaseoutPercent: 0.0765,
     phaseoutEndingIncome: 15820
