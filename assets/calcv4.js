@@ -68,11 +68,11 @@ const MARRIED_JOINT_BRACKETS = [
 
 const SINGLE_BRACKETS = [
   {
-    minimumIncome: 7030,
-    creditRate: 0.0765,
-    phaseoutBeginningIncome: 8790,
-    phaseoutPercent: 0.0765,
-    phaseoutEndingIncome: 15820
+    minimumIncome: 9820,
+    creditRate: 0.153,
+    phaseoutBeginningIncome: 11610,
+    phaseoutPercent: 0.153,
+    phaseoutEndingIncome: 21427
   },
   {
     minimumIncome: 10540,
